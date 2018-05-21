@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html> 
+<head>
+
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ng-app="angularapplication">
+
+
+<!-- Our Website Content Goes Here -->
+<div ng-include='"templates/header.html"'></div>
+<div ng-view></div>
+<div ng-include='"templates/footer.html"'></div>
+
+
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/js/jquery-1.9.0.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/listcontactctrl.js"></script>
+<script src="js/contact_me.js"></script>
+<script src="js/addContactCtrl.js"></script>
+<script src="json/contactlist.json"></script>
+
+</body>
+</html>
