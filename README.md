@@ -1,7 +1,7 @@
 # angularapplication
 Demo Application using AngularJS
 
-#This is a demo application for the Content Management Application using AngularJS.
+#This is a demo application for the Contact Management Application using AngularJS.
 
 #To start using this application, you need to have a web server that will handle the request. (eg. nginx)
 
