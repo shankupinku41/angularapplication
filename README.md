@@ -74,3 +74,5 @@ server {
 
 #For any queries, please get back to me.
 
+#The hardc0ded string literals used in the applcation can be extracted from a trans file or through controller through ng-value, ng-model or ng-bind
+
