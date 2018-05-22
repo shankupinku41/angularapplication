@@ -1,93 +1,98 @@
-<div class="container">
-<table ng-show="tablelength" class="table table-striped">
-	<thead>
-      <tr>
-        <th>First Name</th>
-		<th>Last Name</th>
-        <th>Email</th>
-		<th>Phone</th>
-		<th>Status</th>
-		<th>Actions</th>
-      </tr>
-    </thead>
-	    <tbody>
-  <tr ng-repeat="x in tabledata">
-    <td>{{ x.firstname }}</td>
-	<td>{{ x.lastname }}</td>
-    <td>{{ x.email }}</td>
-	<td>{{ x.phonenumber }}</td>
-	<td>{{ x.statususer }}</td>
-	<td><a ng-click="editContact($index)" class="btnEdit glyphicon glyphicon-pencil fa-fw "/>   <a ng-click="deleteContact($index)" class="btnDelete glyphicon glyphicon-trash fa-fw"/></td>
-  </tr>
-  </tbody>
-</table>
-<span ng-hide="tablelength"> There are no items present. Go to the "Add Contact" section to add contact information.</span>
+<div class="container alert alert-success alert-dismissible fade in container" ng-show="successfultextflag">
+    Data updated successfully.
 </div>
 
-<div ng-show = "editFlag">
+
+<div class="container alert alert-success alert-dismissible fade in container" ng-show="deletedtextflag">
+    Data deleted successfully.
+</div>
+
 <div class="container">
-	<div class="row col-md-12">
-		<div class="form-group">
-  <label class="headertext2">Edit User Information: </label>
-	</div>
-		</div>
-  <form id="updateform">
-  <div class="row col-md-12">
-  <div class="form-group col-md-6">
-      <label for="text">First Name:</label>
-      <input type="text" ng-model="firstnametext" class="form-control" id="email" placeholder="Enter First Name">
-	  <span class="text-danger" 
-            ng-show="invalidfirstname">
+    <table ng-show="tablelength" class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in tabledata">
+                <td>{{ x.firstname }}</td>
+                <td>{{ x.lastname }}</td>
+                <td>{{ x.email }}</td>
+                <td>{{ x.phonenumber }}</td>
+                <td>{{ x.statususer }}</td>
+                <td><a ng-click="editContact($index)" class="btnEdit glyphicon glyphicon-pencil fa-fw " /> <a ng-click="deleteContact($index)" class="btnDelete glyphicon glyphicon-trash fa-fw" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <span ng-hide="tablelength"> There are no items present. Go to the "Add Contact" section to add contact information.</span>
+</div>
+
+
+
+<div ng-show="editFlag">
+    <div class="container">
+        <div class="row col-md-12">
+            <div class="form-group">
+                <label class="headertext2">Edit User Information: </label>
+            </div>
+        </div>
+        <form id="updateform">
+            <div class="row col-md-12">
+                <div class="form-group col-md-6">
+                    <label for="text">First Name:</label>
+                    <input type="text" ng-model="firstnametext" class="form-control" id="email" placeholder="Enter First Name">
+                    <span class="text-danger" ng-show="invalidfirstname">
                      Please enter your First Name.
       </span>
-    </div>
-	<div class="form-group col-md-6">
-      <label for="text">Last Name:</label>
-      <input type="text" ng-model="lastnametext" class="form-control" id="email" placeholder="Enter Last Name">
-	  <span class="text-danger" 
-            ng-show="invalidlastname">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="text">Last Name:</label>
+                    <input type="text" ng-model="lastnametext" class="form-control" id="email" placeholder="Enter Last Name">
+                    <span class="text-danger" ng-show="invalidlastname">
                      Please enter your Last Name.
       </span>
-    </div>
-  </div>
-  <div class="row col-md-12">
-    <div class="form-group col-md-6">
-      <label for="email">Email:</label>
-      <input type="email" ng-model="emailtext" class="form-control" id="email" placeholder="Enter email">
-	  <span class="text-danger" 
-            ng-show="invalidemail">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-6">
+                    <label for="email">Email:</label>
+                    <input type="email" ng-model="emailtext" class="form-control" id="email" placeholder="Enter email">
+                    <span class="text-danger" ng-show="invalidemail">
                      Valid Email ID is required.(eg: demo@example.com)
       </span>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="number">Phone Number:</label>
-      <input type="text" ng-model="phonenumbertext" class="form-control" id="pwd" maxlength="10" placeholder="Enter Phone Number">
-	  <div class="text-danger" 
-            ng-show="invalidphonenumber">
-                     Valid mobile number is required.
-      </div>
-    </div>
-  </div>
-  <div class="row col-md-12">
-    <div class="form-group col-md-6">
-      <label for="text">Status:</label>
-      <select class="form-control" id="statusofuser" ng-model="statusofcontact">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="number">Phone Number:</label>
+                    <input type="text" ng-model="phonenumbertext" class="form-control" id="pwd" maxlength="10" placeholder="Enter Phone Number">
+                    <div class="text-danger" ng-show="invalidphonenumber">
+                        Valid mobile number is required.
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-6">
+                    <label for="text">Status:</label>
+                    <select class="form-control" id="statusofuser" ng-model="statusofcontact">
 		<option value="" selected> Select </option>
 		<option value="Active" > Active </option>
 		<option value="Inactive"> Inactive </option>
 	  </select>
-	  <div class="text-danger" 
-            ng-show="invalidstatus">
-                     Please enter the status.
-      </div>
-	</div>
-  </div>
-  <div class="row col-md-12">
-	<div class="form-group col-md-12 text-right">
-		<button type="submit" ng-click="updatecontact()" class="buttonclass btn btn-primary">Update</button>
-	</div>
-  </div>
-  </form>
+                    <div class="text-danger" ng-show="invalidstatus">
+                        Please enter the status.
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="form-group col-md-12 text-right">
+                    <button type="submit" ng-click="updatecontact()" class="buttonclass btn btn-primary">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
-</div>
-
