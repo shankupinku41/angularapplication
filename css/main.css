@@ -1,75 +1,74 @@
-
 hr {
     display: block;
-    height: 1px;
+    height: 1 px;
     border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
+    border - top: 1 px solid# ccc;
+    margin: 1e m 0;
     padding: 0;
 }
 
-.table tbody tr td{
-		padding:40px;
+.table tbody tr td {
+    padding: 40 px;
 }
 
-.logoimg{
-	width:200px;
+.logoimg {
+    width: 200 px;
 }
 
-a .glyphicon {
-	margin-left:5em;
+a.glyphicon {
+    margin - left: 5e m;
 }
 
 a {
-    text-decoration: none !important;
+    text - decoration: none!important;
 }
 
-tr{
-	
-}
+tr {
 
-
-.navtext{
-	font-weight:bold;
-	border:1px solid black;
-	border-collapse:collapse;
-	color:white;
-	
-}
-
-.navtext1{
-	color:white;
-}
-
-p{
-	text-align:center;
-}
-
-.navigationtabs{
-	
-	background-color: #dfdfdf;
-}
-
-.header{
-	width:100%;
-	padding:30px;
-	height:60%;
-	background-color:#bbbbbb;
-	
 }
 
 
+.navtext {
+    font - weight: bold;
+    border: 1 px solid black;
+    border - collapse: collapse;
+    color: white;
 
-.container{
-	margin-top:20px;
-	margin-left: "50%";
-	margin-top: "10%";
-	background-color: #f1f1f1;
-        z-index: 2; /* Make sure its above other items. */
+}
 
-        /* You will not need the below, its only for styling   purposes. */
-        padding: 30px;
-        border: 1px solid #555555;
+.navtext1 {
+    color: white;
+}
+
+p {
+    text - align: center;
+}
+
+.navigationtabs {
+
+    background - color: #dfdfdf;
+}
+
+.header {
+    width: 100 % ;
+    padding: 30 px;
+    height: 60 % ;
+    background - color: #bbbbbb;
+
+}
+
+
+
+.container {
+    margin - top: 20 px;
+    margin - left: "50%";
+    margin - top: "10%";
+    background - color: #f1f1f1;
+    z - index: 2; /* Make sure its above other items. */
+
+    /* You will not need the below, its only for styling   purposes. */
+    padding: 30 px;
+    border: 1 px solid #555555;
         border-radius: 5px;
 }
 
@@ -77,38 +76,38 @@ p{
 	margin-top:20px;
 	margin-left: "50%";
 	margin-top: "10%";
-	background-color: #eeeeee;
-        z-index: 2;
-        
+	background-color: # eeeeee;
+    z - index: 2;
+
 }
 
-.containerfooter{
-	height:100px;
-	margin-top:20px;
-	background-color: #eeeeee;
-        z-index: 2;
-        
+.containerfooter {
+    height: 100 px;
+    margin - top: 20 px;
+    background - color: #eeeeee;
+    z - index: 2;
+
 }
 
-td{
-	color:black;
+td {
+    color: black;
 }
 
-	
-.buttonclass{
-	width:200px;
+
+.buttonclass {
+    width: 200 px;
 }
 
 .headertext2 {
-	margin-left:10px;
-	font-size: 20px;
-	font-family: "Helvetica Neue,Helvetica,Arial,sans-serif";
+    margin - left: 10 px;
+    font - size: 20 px;
+    font - family: "Helvetica Neue,Helvetica,Arial,sans-serif";
 }
 
 
-.headertext{
-	margin-left:10px;
-	color:white;
-	font-size: 40px;
-	font-family: "Helvetica Neue,Helvetica,Arial,sans-serif";
+.headertext {
+    margin - left: 10 px;
+    color: white;
+    font - size: 40 px;
+    font - family: "Helvetica Neue,Helvetica,Arial,sans-serif";
 }
