@@ -72,3 +72,5 @@ server {
 
 #Once the nginx server is running, you can hit the URL: http://localhost:80/ and start using the application.
 
+#For any queries, please get back to me.
+
