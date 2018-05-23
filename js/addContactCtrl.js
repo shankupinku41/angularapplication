@@ -18,26 +18,26 @@ app.controller('addContactCtrl', ['$scope', '$rootScope', function($scope, $root
             "firstname": "Ram",
             "lastname": "Kumar",
             "email": "ram@gmail.com",
-            "phonenumber": "9947385746",
-            "statususer": "Active"
+            "phonenumber": "9945859687",
+            "statususer": "Active",
         }, {
             "firstname": "Shyam",
             "lastname": "Kumar",
             "email": "shyam23@gmail.com",
-            "phonenumber": "9947385746",
-            "statususer": "Active"
+            "phonenumber": "7829350204",
+            "statususer": "Active",
         }, {
             "firstname": "John",
             "lastname": "Shastri",
             "email": "john@gmail.com",
-            "phonenumber": "9947385746",
-            "statususer": "Inactive"
+            "phonenumber": "9946374657",
+            "statususer": "Inactive",
         }, {
             "firstname": "Bob",
             "lastname": "Dillon",
             "email": "bob32@gmail.com",
-            "phonenumber": "9947385746",
-            "statususer": "Active"
+            "phonenumber": "8904756487",
+            "statususer": "Active",
         }];
     } else {
 
@@ -99,7 +99,8 @@ app.controller('addContactCtrl', ['$scope', '$rootScope', function($scope, $root
                 lastname: $scope.lastname,
                 email: $scope.email,
                 phonenumber: $scope.phonenumber,
-                statususer: $scope.statususer
+                statususer: $scope.statususer,
+				action: ""
             });
 
             $scope.firstname = '';
@@ -107,6 +108,7 @@ app.controller('addContactCtrl', ['$scope', '$rootScope', function($scope, $root
             $scope.email = '';
             $scope.phonenumber = '';
             $scope.statususer = '';
+			$scope.action = '';
             $scope.successfultextflag = true;
         }
     }
