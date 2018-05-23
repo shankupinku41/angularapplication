@@ -122,12 +122,14 @@ app.controller('listContactCtrl', ['$scope', '$rootScope', function($scope, $roo
     }
 
     // delete a contact information
-    $scope.deleteContact = function(index) {
+    $scope.deleteContact = function(item) {
         $scope.successfultextflag = false;
         $scope.deletedtextflag = true;
-        $rootScope.tabledata.splice(index, 1);
+        $rootScope.tabledata.splice($rootScope.tabledata.indexOf(item), 1);
         $scope.tablelength -= 1;
 		$scope.editFlag = false;
 
     }
 }]);
+
+
