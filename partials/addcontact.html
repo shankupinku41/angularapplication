@@ -5,14 +5,17 @@
 
 <div class="container">
 	<div class="row col-md-12">
-		<div class="form-group">
+		<div class="form-group col-md-6">
   <label class="headertext2">Add User Information: </label>
+	</div>
+		<div class="col-md-6 text-right">
+  <span>Items marked with <span class="mandatory">*</span> are mandatory. </span>
 	</div>
 		</div>
   <form name="userdetailsform">
   <div class="row col-md-12">
   <div class="form-group col-md-6">
-      <label for="text">First Name:</label>
+      <label for="text">First Name<span class="mandatory">*</span>:</label>
       <input type="text" ng-model="firstname" class="form-control" id="firstname" maxlength="20" placeholder="Enter First Name">
 	  <span class="text-danger" 
             ng-show="invalidfirstname">
@@ -20,7 +23,7 @@
       </span>
     </div>
 	<div class="form-group col-md-6">
-      <label for="text">Last Name:</label>
+      <label for="text">Last Name<span class="mandatory">*</span>:</label>
       <input type="text" ng-model="lastname" class="form-control" id="lastname"  maxlength="30" placeholder="Enter Last Name">
 	  <span class="text-danger" 
             ng-show="invalidlastname">
@@ -30,7 +33,7 @@
   </div>
   <div class="row col-md-12">
     <div class="form-group col-md-6">
-      <label for="email">Email:</label>
+      <label for="email">Email<span class="mandatory">*</span>:</label>
       <input type="email" ng-model="email" class="form-control" id="email" placeholder="Enter email">
 	  <span class="text-danger" 
             ng-show="invalidemail">
@@ -38,7 +41,7 @@
       </span>
     </div>
     <div class="form-group col-md-6">
-      <label for="number">Mobile Number:</label>
+      <label for="number">Mobile Number<span class="mandatory">*</span>:</label>
       <input type="text" ng-model="phonenumber" class="form-control" id="phonenumber" 
               placeholder="Enter Phone Number">
 		<div class="text-danger" 
@@ -50,7 +53,7 @@
   </div>
   <div class="row col-md-12">
     <div class="form-group col-md-6">
-      <label for="text">Status:</label>
+      <label for="text">Status<span class="mandatory">*</span>:</label>
       <select class="form-control" id="statusOfUser" ng-model="statususer">
 		<option value="" selected>Select</option>
 		<option value="Active" > Active </option>
