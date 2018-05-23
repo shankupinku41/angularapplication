@@ -9,7 +9,9 @@ var app = angular.module('angularapplication', [
 /**
  * Configure the Routes
  */
-app.config(['$routeProvider', function($routeProvider) {
+app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
+	// Setting html5Mode as true to remove hashtag
+		$locationProvider.html5Mode(true);
     $routeProvider
         .when("/", {
             templateUrl: "home.html",
@@ -36,3 +38,4 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: ""
         });
 }]);
+
