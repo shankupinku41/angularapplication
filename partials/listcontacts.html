@@ -1,35 +1,58 @@
 <div class="container alert alert-success alert-dismissible fade in container" ng-show="successfultextflag">
+
     Data updated successfully.
 </div>
 
 
 <div class="container alert alert-success alert-dismissible fade in container" ng-show="deletedtextflag">
+
     Data deleted successfully.
 </div>
 
 <div class="container">
     <table ng-show="tablelength" class="table table-striped">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="x in tabledata">
-                <td>{{ x.firstname }}</td>
-                <td>{{ x.lastname }}</td>
-                <td>{{ x.email }}</td>
-                <td>{{ x.phonenumber }}</td>
-                <td>{{ x.statususer }}</td>
-                <td><a ng-click="editContact($index)" class="btnEdit glyphicon glyphicon-pencil fa-fw " /> <a ng-click="deleteContact($index)" class="btnDelete glyphicon glyphicon-trash fa-fw" /></td>
-            </tr>
-        </tbody>
-    </table>
+    <thead>
+        <tr>
+            <td>
+				<a ng-click="sortType = 'firstname'">
+					First Name
+				</a>
+			</td>
+            <td>
+				<a ng-click="sortType = 'lastname'">
+					Last Name
+				</a>
+			</td>
+            <td>
+				<a ng-click="sortType = 'email'">
+					Email
+				</a>
+			</td>
+            <td>
+				<a ng-click="sortType = 'phonenumber'">
+					Phone
+				</a>
+			</td>
+            <td>
+				<a ng-click="sortType = 'statususer'">
+					Status
+				</a>
+			</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="x in tabledata | orderBy:sortType">
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.email }}</td>
+            <td>{{ x.phonenumber }}</td>
+            <td>{{ x.statususer }}</td>
+            <td><a ng-click="editContact(x)" class="btnEdit glyphicon glyphicon-pencil fa-fw " /> <a ng-click="deleteContact(x)" class="btnDelete glyphicon glyphicon-trash fa-fw" /></td>
+        </tr>
+    </tbody>
+</table>
+	<span ng-show="tablelength" class="fa fa-info-circle"> For sorting any column, please click on that particular column header.</span>
     <span ng-hide="tablelength"> There are no items present. Go to the "Add Contact" section to add contact information.</span>
 </div>
 
