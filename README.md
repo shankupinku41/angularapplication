@@ -74,5 +74,6 @@ server {
 
 #For any queries, please get back to me.
 
-#The hardc0ded string literals used in the applcation can be extracted from a trans file or through controller through ng-value, ng-model or ng-bind
+#The hardcoded string literals used in the applcation can be extracted from a trans file or through controller through ng-value, ng-model or ng-bind
 
+#This application provides functionality for adding a contact information, editing details of a contact, deleting contact and displaying all the contacts.(Based on AngularJS)
