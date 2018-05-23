@@ -11,27 +11,29 @@ app.controller('listContactCtrl', ['$scope', '$rootScope', function($scope, $roo
             "lastname": "Kumar",
             "email": "ram@gmail.com",
             "phonenumber": "9945859687",
-            "statususer": "Active"
+            "statususer": "Active",
         }, {
             "firstname": "Shyam",
             "lastname": "Kumar",
             "email": "shyam23@gmail.com",
             "phonenumber": "7829350204",
-            "statususer": "Active"
+            "statususer": "Active",
         }, {
             "firstname": "John",
             "lastname": "Shastri",
             "email": "john@gmail.com",
             "phonenumber": "9946374657",
-            "statususer": "Inactive"
+            "statususer": "Inactive",
         }, {
             "firstname": "Bob",
             "lastname": "Dillon",
             "email": "bob32@gmail.com",
             "phonenumber": "8904756487",
-            "statususer": "Active"
+            "statususer": "Active",
         }];
     }
+	
+	$scope.sortType     = 'firstname'; // set the default sort type
 
     $scope.deletedtextflag = false;
     $scope.successfultextflag = false;
@@ -40,11 +42,11 @@ app.controller('listContactCtrl', ['$scope', '$rootScope', function($scope, $roo
     $scope.tablelength = $rootScope.tabledata.length;
 
     // To edit the user's information and diplay the edit text container in which user can update their details
-    $scope.editContact = function(index) {
+    $scope.editContact = function(item) {
         $scope.deletedtextflag = false;
         $scope.successfultextflag = false;
         $scope.editFlag = true;
-        $scope.trackrow = index;
+        $scope.trackrow = $rootScope.tabledata.indexOf(item);
         $scope.invalidphonenumber = false;
         $scope.invalidemail = false;
         $scope.invalidstatus = false;
@@ -52,11 +54,11 @@ app.controller('listContactCtrl', ['$scope', '$rootScope', function($scope, $roo
         $scope.invalidfirstname = false;
         $scope.invalidlastname = false;
 
-        $scope.firstnametext = $rootScope.tabledata[index].firstname;
-        $scope.lastnametext = $rootScope.tabledata[index].lastname;
-        $scope.emailtext = $rootScope.tabledata[index].email;
-        $scope.phonenumbertext = $rootScope.tabledata[index].phonenumber;
-        $scope.statusofcontact = $rootScope.tabledata[index].statususer;
+        $scope.firstnametext = item.firstname;
+        $scope.lastnametext = item.lastname;
+        $scope.emailtext = item.email;
+        $scope.phonenumbertext = item.phonenumber;
+        $scope.statusofcontact = item.statususer;
     }
 
     // Validations are performed here and details are updated in the table
@@ -125,6 +127,7 @@ app.controller('listContactCtrl', ['$scope', '$rootScope', function($scope, $roo
         $scope.deletedtextflag = true;
         $rootScope.tabledata.splice(index, 1);
         $scope.tablelength -= 1;
+		$scope.editFlag = false;
 
     }
 }]);
